@@ -18,12 +18,12 @@ def run_detection(mode="live"):
         return data
 
     # ===============================
-    # 🔥 CLEAN COLUMN NAMES
+    #  CLEAN COLUMN NAMES
     # ===============================
     data.columns = data.columns.str.strip()
 
     # ===============================
-    # 🔥 CHECK REQUIRED COLUMNS
+    #  CHECK REQUIRED COLUMNS
     # ===============================
     required = ["IP_Address", "Requests", "Data_Size"]
 
@@ -33,12 +33,12 @@ def run_detection(mode="live"):
         raise ValueError(f"❌ Missing columns: {missing} | Found: {data.columns.tolist()}")
 
     # ===============================
-    # 🔥 SELECT ONLY REQUIRED COLUMNS
+    #  SELECT ONLY REQUIRED COLUMNS
     # ===============================
     data = data[required]
 
     # ===============================
-    # 🔥 HANDLE MISSING VALUES
+    #  HANDLE MISSING VALUES
     # ===============================
     data = data.fillna(0)
 

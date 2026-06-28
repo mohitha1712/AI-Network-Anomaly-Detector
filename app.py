@@ -5,12 +5,12 @@ import datetime
 
 st.set_page_config(page_title="AI Network Surveillance System", layout="wide")
 
-# 🔄 Refresh Button
+#  Refresh Button
 if st.sidebar.button("🔄 Refresh Live Data"):
     st.rerun()
 
 # ===============================
-# 🩸 CSS (UNCHANGED)
+#  CSS (UNCHANGED)
 # ===============================
 st.markdown("""
 <style>
